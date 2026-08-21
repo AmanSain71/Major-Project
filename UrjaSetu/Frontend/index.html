@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrjaSetu-Bridge of energy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<nav class="navbar">
+<div class="logo">
+🏋️UrjaSetu-Fitness Challenge Community
+</div>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#workout">Workout</a></li>
+<li><a href="#challenge">Challenges</a></li>
+<li><a href="#leaderboard">Leaderboard</a></li>
+<li><a href="#dashboard">Dashboard</a></li>
+</ul>
+</nav>
+</header>
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>
+Fitness Challenge Community
+</h1>
+<p>
+Track your workouts, join exciting challenges,
+compete with your friends and achieve your fitness goals.
+</p>
+<button onclick="scrollToWorkout()">
+Start Your Journey
+</button>
+</div>
+</section>
+<section class="features" id="features">
+<h2>
+Our Features
+</h2>
+<div class="feature-container">
+<div class="card">
+<h3>Workout Tracker</h3>
+<p>
+Save your daily workouts with sets, reps and calories.
+</p>
+</div>
+<div class="card">
+<h3>Fitness Challenges</h3>
+<p>
+Create or join group fitness challenges.
+</p>
+</div>
+<div class="card">
+<h3>Leaderboard</h3>
+<p>
+Compete with friends and earn points.
+</p>
+</div>
+<div class="card">
+<h3>Progress Photos</h3>
+<p>
+Compare your transformation over time.
+</p>
+</div>
+<div class="card">
+<h3>Daily Streak</h3>
+<p>
+Maintain workout consistency and improve fitness.
+</p>
+</div>
+<div class="card">
+<h3>Dashboard</h3>
+<p>
+View your complete workout statistics.
+</p>
+</div>
+</div>
+</section>
+<section id="workout" class="workout">
+<h2>
+Workout Logger
+</h2>
+<form id="workoutForm">
+<div id="workoutList"></div>
+<input type="text"id="exercise"placeholder="Exercise Name"required>
+<input type="number"id="sets"placeholder="Sets"required>
+<input type="number"id="reps"placeholder="Reps"required>
+<input type="number"id="calories"placeholder="Calories Burned"required>
+<button type="submit">
+Save Workout
+</button>
+</form>
+</section>
+<section class="dashboard" id="dashboard">
+<h2>
+Your Dashboard
+</h2>
+<div class="dashboard-box">
+<div class="box">
+<h3 id="totalWorkout">
+0
+</h3>
+<p>
+Total Workouts
+</p>
+</div>
+<div class="box">
+<h3 id="totalPoints">
+0
+</h3>
+<p>
+Fitness Points
+</p>
+</div>
+<div class="box">
+<h3 id="totalCalories">
+0
+</h3>
+<p>
+Calories Burned
+</p>
+</div>
+<div class="box">
+<h3 id="streak">
+0
+</h3>
+<p>
+Workout Streak
+</p>
+</div>
+</div>
+<section class="challenge" id="challenge">
+
+    <h2>Fitness Challenges</h2>
+
+    <div id="challengeContainer" class="challenge-container">
+
+    </div>
+
+</section>
+<section class="leaderboard" id="leaderboard">
+
+    <h2>Leaderboard</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Rank</th>
+
+                <th>Name</th>
+
+                <th>Total Progress</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="leaderboardBody">
+
+        </tbody>
+
+    </table>
+
+</section>
+<section class="photos">
+<h2>
+Progress Photos
+</h2>
+<div class="photo-upload">
+<div>
+<h3>Before</h3>
+<input
+type="file"
+id="beforeImage"
+accept="image/*">
+<img id="beforePreview">
+</div>
+<div>
+<h3>After</h3>
+<input
+type="file"
+id="afterImage"
+accept="image/*">
+<img id="afterPreview">
+</div>
+</div>
+</section>
+<section class="motivation">
+<h2>
+Daily Motivation
+</h2>
+<p id="quote">
+"The only bad workout is the one you didn't do."
+</p>
+<footer>
+<div class="footer-content">
+<h3>
+Fitness Challenge Community
+</h3>
+<p
+Stay Fit • Stay Healthy • Stay Motivated
+</p>
+<p>
+     Fitness Challenge Community
+</p>
+</div>
+</footer>
+
+<script>
+
+const token = localStorage.getItem("token");
+
+
+if(!token){
+
+window.location.href="login.html";
+
+}
+
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
