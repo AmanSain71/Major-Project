@@ -22,9 +22,13 @@ app.get("/", (req, res) => {
     res.send("UrjaSetu Backend Running 🚀");
 });
 
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log("MongoDB Connected"))
-    .catch(err => console.log(err));
-
-module.exports = app;
+.then(() => {
+    console.log("MongoDB Connected");
+    app.listen(PORT, () => {
+        console.log(`Server Running on ${PORT}`);
+    });
+})
+.catch(err => console.log(err));
