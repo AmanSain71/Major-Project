@@ -1,6 +1,6 @@
 alert("New Login JS Loaded");
 
-const API = "http://localhost:5000/api";
+const API = "http://major-project-mu-vert.vercel.app/api";
 
 async function login() {
 

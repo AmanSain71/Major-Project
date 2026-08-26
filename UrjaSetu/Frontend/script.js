@@ -177,7 +177,7 @@ async function loadDashboard() {
 
     document.getElementById("streak").innerHTML = progress.length;
 }
-const API = "http://localhost:5000/api";
+const API = "http://major-project-mu-vert.vercel.app/api";
 
 async function loadLeaderboard() {
     try {
