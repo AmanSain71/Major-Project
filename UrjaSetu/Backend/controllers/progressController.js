@@ -1,5 +1,5 @@
-const Progress = require("../models/Progress");
-const Challenge = require("../models/Challenge");
+const Progress = require("../models/progress");
+const Challenge = require("../models/challenge");
 
 // Add Progress
 exports.addProgress = async (req, res) => {

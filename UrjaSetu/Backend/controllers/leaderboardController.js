@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Progress = require("../models/Progress");
+const Progress = require("../models/progress");
 
 exports.getLeaderboard = async (req, res) => {
   try {
